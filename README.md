@@ -36,33 +36,33 @@ In the genre section, The user will be able to choose from the following:
 - Mystery
 - Horror
 
-![](app-frontend.png "App UI")
+<img width="900" height="700" alt="app-frontend" title="App UI" src="https://github.com/user-attachments/assets/741dbbc9-4456-4ad4-8763-bddc05c7dfa5" />
 
 In the **Add a Book** section at the bottom, if the user tries to submit an empty form, the validation system in and the UI informs the user of the required fields.
 
-![](app-frontend-form-validation.png "Form validation")
+<img width="500" height="500" alt="app-frontend-form-validation" title="Form validation" src="https://github.com/user-attachments/assets/59936f4a-4b1c-4b7e-9358-db7929842bb8" />
 
 The UI also informs the user if they try to enter a negative value in the price field.
 
-![](app-frontend-form-validation-price.png "Price validation")
+<img width="500" height="490" alt="app-frontend-form-validation-price" title="Price validation" src="https://github.com/user-attachments/assets/b87c52ed-e984-40f4-838f-07d38c65785f" />
 
 Once the user has submitted the required data, they can press the **Add Book** button to add a book. If the process is successful, a pop-up message will appear to notify the user.
 
 **Success:**
 
-![](app-frontend-success.png "Success message")
+<img width="400" height="166" alt="app-frontend-success" title="Success message" src="https://github.com/user-attachments/assets/5fc32ca6-11d9-4c07-abd5-9d2ed9815976" />
 
 **Failure:**
 
-![](app-frontend-fail.png "Fail message")
+<img width="400" height="160" alt="app-frontend-fail" title="Fail message" src="https://github.com/user-attachments/assets/b6e67f6f-c0cf-4813-ab88-806e2a712347" />
 
 In the **Search Books** section at the top, entering a keyword will display matching books in a structured table at the bottom.
 
-![](app-frontend-search-results.png "Search results")
+<img width="600" height="252" alt="app-frontend-search-results" title="Search results" src="https://github.com/user-attachments/assets/0013e847-8269-48f1-a555-e1d24903a2a6" />
 
 If there are no matching books, this row appears inside the table.
 
-![](app-frontend-search-no-results.png "No results message")
+<img width="600" height="244" alt="app-frontend-search-no-results" title="No results message" src="https://github.com/user-attachments/assets/acf7d1ce-1e8e-46af-9955-0a5dd19d961f" />
 
 ## Backend
 
