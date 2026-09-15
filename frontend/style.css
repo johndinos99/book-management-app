@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --red: #c0392b;
+}
+
+body {
+    min-height: 100vh;
+    min-height: 100dvh;
+    font-family: Arial, sans-serif;
+    background: #eefafa;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1 { 
+    text-align: center; 
+    color: #367f7f; 
+}
+
+h2 { 
+    margin: 0 0 10px;
+    color: #367f7f;
+    font-size: 20px;
+}
+
+main {
+    width: min(100% - 4rem, 900px);
+    margin: 0 auto;
+    padding: 20px;
+
+    display: grid;
+    gap: 20px;
+}
+
+.form-group {
+    display: grid;
+}
+
+label { 
+    font-size: 14px; 
+    font-weight: 600; 
+} 
+
+input { 
+    width: 100%; 
+    padding: 11px 12px; 
+    border: 1px solid #b9dcdc; 
+    border-radius: 6px; 
+    outline: none; 
+    font-size: 15px; 
+    background: #fff; 
+} 
+
+input:focus { 
+    border-color: #63c5c5; 
+}
+
+select {
+    width: 100%;
+    padding: 11px 12px;
+    border: 1px solid #b9dcdc;
+    border-radius: 6px;
+    outline: none;
+    font-size: 15px;
+    background: #fff;
+    color: #263b3b;
+    cursor: pointer;
+}
+
+select:focus {
+    border-color: #63c5c5;
+}
+
+.search-form {
+    display: grid;
+    grid-template-columns: 1fr 100px;
+    gap: 1rem;
+
+    @media (width < 520px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.add-form {
+    display: grid;
+    gap: 1rem;
+}
+
+button { 
+    padding: 11px 18px; 
+    border: 0; 
+    border-radius: 6px; 
+    background: #63c5c5; 
+    color: #fff; 
+    font-size: 15px; 
+    cursor: pointer; 
+} 
+
+button:hover { 
+    background: #50b3b3; 
+}
+
+.add-form button {
+    justify-self: start;
+}
+
+@media (width < 520px) {
+    .search-form button {
+        justify-self: start;
+    }
+}
+
+.card { 
+    background: #fff; 
+    border: 1px solid #d3eeee; 
+    border-radius: 10px; 
+    padding: 20px;
+}
+
+.result-table { 
+    display: none;
+    margin-top: 20px; 
+    overflow-x: auto; 
+    border: 1px solid #d3eeee; 
+    border-radius: 8px; 
+}
+
+table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    background: #ffffff; 
+}
+
+thead { 
+    background: #63c5c5; 
+    color: #ffffff; 
+}
+
+th, td { 
+    padding: 11px 13px; 
+    text-align: center; 
+    border-bottom: 1px solid #dceeee; 
+    white-space: nowrap; 
+}
+
+th {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+td {
+    font-size: 14px;
+}
+
+tbody tr:hover {
+    background: #f3fbfb;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+input.invalid,
+select.invalid,
+input:user-invalid,
+select:user-invalid {
+    border-color: var(--red);
+}
+
+.error-message {
+    color: var(--red);
+}
+
+.error-message:empty {
+    display: none;
+}

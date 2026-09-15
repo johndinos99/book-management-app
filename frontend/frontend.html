@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>WebDev Assignment</title>
+</head>
+<body>
+    <main>
+        <h1>Book Library</h1>
+
+        <section class="card">
+            <h2>Search Books</h2>
+
+            <form class="search-form">
+                <div class="form-group">
+                    <input type="search" id="keyword" name="keyword" placeholder="Enter book title or author">
+                </div>
+
+                <button id="search-btn">Search</button>
+            </form>
+
+            <div class="result-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Author</th>
+                            <th>Genre</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                    <tbody id="results">
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Add a Book</h2>
+
+            <form class="add-form" novalidate>
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" name="title" placeholder="Enter book title" required>
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-group">
+                    <label for="author">Author</label>
+                    <input type="text" id="author" name="author" placeholder="Enter author name" required>
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-group">
+                    <label for="genre">Genre</label>
+                    <select name="genre" id="genre" required data-error="Please select a genre">
+                        <option value="" disabled selected>Select a genre</option>
+
+                        <option value="Sciense Fiction">Sciense Fiction</option>
+                        <option value="Satire">Satire</option>
+                        <option value="Drama">Drama</option>
+                        <option value="Action and Adventure">Action and Adventure</option>
+                        <option value="Romance">Romance</option>
+                        <option value="Mystery">Mystery</option>
+                        <option value="Horor">Horor</option>
+                    </select>
+                    <span class="error-message"></span>
+                </div>
+                <div class="form-group">
+                    <label for="price">Price</label>
+                    <input type="number" id="price" name="price" placeholder="Enter book price" step="0.01" min="0" required>
+                    <span class="error-message"></span>
+                </div>
+
+                <button id="add-btn">Add Book</button>
+            </form>
+        </section>
+    </main>
+</body>
+<script src="script.js"></script>
+</html>
