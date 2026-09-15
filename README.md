@@ -1,6 +1,6 @@
 # Book Management App
 
-This is a full-stack web application for managing a book collection saved on a remote database. The project provides a simple frontend for adding and searching books, communicating with a RESTful backend API through AJAX requests and a MySQL database.
+This is a full-stack web application for managing a book collection stored in a MySQL database. The project provides a simple frontend for adding and searching books, communicating with a RESTful backend API through AJAX requests and a MySQL database.
 
 It was created as part of the **Web Technologies and Applications** university course. The course focuses on developing modern web applications. Topics covered included web protocols and HTTP, HTML/CSS, JavaScript and the DOM, event-driven and asynchronous programming, REST APIs and web services, Node.js, client-server and three-tier architectures, MVC applications and cloud-based development.
 
@@ -13,20 +13,20 @@ It was created as part of the **Web Technologies and Applications** university c
 - Search for books by keyword
 - Display search results in a structured table
 - RESTful API for book management
-- MySQL database for storing books information
+- MySQL database for storing book information
 
 ## Technologies
 
 - **Frontend:** HTML, CSS, JavaScript
-- **Backend:** Node.js - Express JS
+- **Backend:** Node.js - Express.js
 - **Database:** MySQL
 - **Communication:** REST API / AJAX
 
 ## Frontend
 
-The UI contains a search bar at the top where users can search for books by entering keywords. There is also a form at the bottom where users can add books to the database by providing the title, author, genre and price..
+The UI contains a search bar at the top where users can search for books by entering keywords. There is also a form at the bottom where users can add books to the database by providing the title, author, genre and price.
 
-In the genre section, The user will be able to choose from the following:
+In the genre section, users can choose from the following:
 
 - Science Fiction
 - Satire
@@ -38,7 +38,7 @@ In the genre section, The user will be able to choose from the following:
 
 <img width="900" height="700" alt="app-frontend" title="App UI" src="https://github.com/user-attachments/assets/741dbbc9-4456-4ad4-8763-bddc05c7dfa5" />
 
-In the **Add a Book** section at the bottom, if the user tries to submit an empty form, the validation system in and the UI informs the user of the required fields.
+In the **Add a Book** section at the bottom, if the user tries to submit an empty form, the validation system informs the user of the required fields.
 
 <img width="500" height="500" alt="app-frontend-form-validation" title="Form validation" src="https://github.com/user-attachments/assets/59936f4a-4b1c-4b7e-9358-db7929842bb8" />
 
@@ -66,11 +66,11 @@ If there are no matching books, this row appears inside the table.
 
 ## Backend
 
-The backend is a simple RESTfull API using the Express JS library and is connected to an MySQL database for storing all the information.
+The backend is a simple RESTful API built with Express.js and connected to a MySQL database for storing the book information.
 
 ### API Endpoints
 
-### Search Books
+#### Search Books
 
 ```http
 GET /books/{keyword}
@@ -89,7 +89,7 @@ Returns a JSON array containing the matching books.
 ```json
 [
     {
-        "id": "5",
+        "id": 5,
         "title": "Lord of the Rings",
         "author": "J. R. R. Tolkien",
         "genre": "Fantasy",
@@ -100,7 +100,7 @@ Returns a JSON array containing the matching books.
 ]
 ```
 
-### Add Book
+#### Add Book
 
 ```http
 POST /books/
@@ -114,7 +114,7 @@ Adds a new book to the database.
 {
     "title": "The Rings of Saturn",
     "author": "W. G. Sebald",
-    "genre": "Sciense Fiction",
+    "genre": "Science Fiction",
     "price": 13.99
 }
 ```
@@ -145,15 +145,15 @@ CREATE TABLE books (
 │   └── style.css
 │
 └── src/
-    ├── controllers
+    ├── controllers/
     │   └── books.js
-    |
-    ├── database
+    │
+    ├── database/
     │   └── db.js
-    |
-    ├── routes
+    │
+    ├── routes/
     │   └── books.js
-    |
+    │
     └── app.js
 ...
 ```
@@ -199,4 +199,4 @@ The server will start at:
 http://localhost:3000
 ```
 
-5. Open `frontend.html` in your browser to use the application.
+5. Open `frontend/frontend.html` in your browser to use the application.
